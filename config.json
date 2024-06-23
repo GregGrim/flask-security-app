@@ -1,0 +1,14 @@
+{
+  "DEBUG": true,
+  "SECURITY_REGISTERABLE": true,
+  "SECURITY_RECOVERABLE": true,
+  "SECURITY_LOGIN_USER_TEMPLATE": "security/login_user.html",
+  "SECURITY_FORGOT_PASSWORD_TEMPLATE": "security/forgot_password.html",
+  "SECURITY_RESET_PASSWORD_TEMPLATE": "security/reset_password.html",
+  "SECURITY_REGISTER_USER_TEMPLATE": "security/register_user.html",
+  "SECURITY_POST_LOGIN_VIEW": "/after_login/",
+  "SECURITY_POST_REGISTER_VIEW": "/after_register/",
+  "SECURITY_POST_LOGOUT_VIEW": "/after_logout/",
+  "SECURITY_POST_CHANGE_VIEW": "/login",
+  "SECURITY_UNAUTHORIZED_VIEW": "/login"
+}

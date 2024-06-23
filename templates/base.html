@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    .container {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        background-color: #f9f9f9;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    .form-field {
+        margin-bottom: 20px;
+        width: 300px;
+    }
+    .form-field input[type="text"],
+    .form-field input[type="password"],
+    .form-field input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .form-field input[type="submit"] {
+        background-color: #5cb85c;
+        color: white;
+        font-size: 16px;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .form-field input[type="submit"]:hover {
+        background-color: #4cae4c;
+    }
+    .form-field label {
+        display: block;
+        margin-bottom: 5px;
+        color: #666;
+    }
+    .form-field label.remember {
+        font-size: 1.2em; /* Larger font size for "Remember Me" */
+    }
+    .form-field input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+    }
+    .links {
+        text-align: center;
+    }
+    .links a {
+        color: #337ab7;
+        text-decoration: none;
+    }
+    .links a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+    <div style="margin-top: 100px">
+    {% block content %}
+    {% endblock %}
+    </div>
+</body>
+</html>
