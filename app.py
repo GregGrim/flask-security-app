@@ -41,11 +41,11 @@ def _init_default_db_records():
         db.create_all()
         user_datastore.find_or_create_role(name='admin')
         user_datastore.find_or_create_role(name='user')
-        if not user_datastore.find_user(email='admin@example.com'):
-            user_datastore.create_user(email='admin@example.com',
+        if not user_datastore.find_user(email=app.config.get('ADMIN_EMAIL')):
+            user_datastore.create_user(email=app.config.get('ADMIN_EMAIL'),
                                        first_name='Admin',
                                        last_name='Admin',
-                                       password=hash_password('password'),
+                                       password=hash_password(app.config.get('ADMIN_PASSWORD')),
                                        roles=['admin'])
         db.session.commit()
 
